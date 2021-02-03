@@ -2,20 +2,22 @@
 <div class="scorecard">
   <h2>{{ str }}</h2>
   <div class="scorecard__container">
-    <Frame str="This is Frame's props" />
-    <Frame str="Another Frame prop" />
-    <Frame str="Another Frame prop" />
-    <Frame str="Another Frame prop" />
-    <Frame str="Another Frame prop" />
-    <Frame str="This is Frame's props" />
-    <Frame str="Another Frame prop" />
-    <Frame str="Another Frame prop" />
-    <Frame str="Another Frame prop" />
-    <TenthFrame str="Tenth Frame prop" />
+    <Frame str="Frame 1" />
+    <Frame str="Frame 2" />
+    <Frame str="Frame 3" />
+    <Frame str="Frame 4" />
+    <Frame str="Frame 5" />
+    <Frame str="Frame 6" />
+    <Frame str="Frame 7" />
+    <Frame str="Frame 8" />
+    <Frame str="Frame 9" />
+    <TenthFrame str="Frame 10" />
     <div class="scorecard__total">
+      <h1>Total Score</h1>
       <h2>{{ totalScore }}</h2>
     </div>
   </div>
+
   <button v-on:click="addToScore">AddScore</button>
   <div v-if="scoreArray !== []">
   <h5>{{ scoreArray }} {{ totalScore }} </h5>
@@ -34,7 +36,8 @@ export default {
     TenthFrame,
   },
   props: {
-    str: String
+    str: String,
+    scoreTotal: Number,
   },
   data: () => ({
     scoreArray: [],

@@ -1,6 +1,6 @@
 <template>
 <div class="tenth-frame">
-  <h2>10th Frame</h2>
+  <h2>{{ str }}</h2>
   <h4>Inside 10th Frame</h4>
   <h1>{{ score }}</h1>
   </div>
@@ -10,7 +10,8 @@
 export default {
   name: 'TenthFrame',
   props: {
-    score: Number
+    score: Number,
+    str: String,
   },
 
 }
